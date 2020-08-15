@@ -1,0 +1,18 @@
+{ "planetName": "Ego",
+
+  "distanceFromSun": 10000000,
+  "diameter": 4000,
+  "mass": 650000,
+  "density": 50,
+  "orbitalEccentricity": 0.2,
+  "orbitalInclination": 0.6,
+  "spinAxisTilt": 10,
+  "rotationDays": 30,
+  "orbitalPeriodAroundSun": 80,
+  "numberOfMoons": 4,
+  "significantSatellites": "Moon 1, Moon 2, Moon 3, Satellite 1",
+  "atmosphereThickness": 30,
+  "atmosphereComposition": "Nitrogen oxide",
+  "interiorStructure": "rock and ice",
+  "summary": "Here are some fun facts about Ego"
+}

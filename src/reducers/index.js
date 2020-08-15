@@ -3,9 +3,11 @@
 import { combineReducers } from 'redux';
 
 import CountReducer from './count-reducer';
+import PlanetReducer from './planet-reducer';
 
 const rootReducer = combineReducers({
   count: CountReducer,
+  planet: PlanetReducer,
 });
 
 export default rootReducer;
