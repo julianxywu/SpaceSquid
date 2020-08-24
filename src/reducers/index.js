@@ -7,7 +7,7 @@ import PlanetReducer from './planet-reducer';
 
 const rootReducer = combineReducers({
   count: CountReducer,
-  planet: PlanetReducer,
+  planets: PlanetReducer,
 });
 
 export default rootReducer;
