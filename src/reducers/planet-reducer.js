@@ -11,6 +11,8 @@ const PlanetReducer = (state = initialState, action) => {
       return { ...state, all: action.payload };
     case ActionTypes.FETCH_PLANET:
       return { ...state, current: action.payload };
+    case ActionTypes.CREATE_PLANET:
+      return { ...state };
     case ActionTypes.RESET_PLANET:
       return initialState;
     default:

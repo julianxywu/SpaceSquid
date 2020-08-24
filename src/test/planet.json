@@ -1,5 +1,5 @@
-{ "planetName": "Ego",
-
+{ "id": "1",
+  "planetName": "Ego",
   "distanceFromSun": 10000000,
   "diameter": 4000,
   "mass": 650000,
