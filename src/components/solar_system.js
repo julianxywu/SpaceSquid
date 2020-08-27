@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Slider } from 'rsuite';
-import { changeSpeed } from '../actions';
 
+// Custom imports
+import '../style/solarsystem.scss';
 import SystemPlanet from './system_planet';
-// import { NavLink } from 'react-router-dom';
+import { changeSpeed } from '../actions';
 import { getPlanets, createPlanet } from '../actions/planetApi';
 
 class SolarSystem extends Component {
@@ -13,7 +14,7 @@ class SolarSystem extends Component {
     super(props);
     this.state = {
       // AU to pixels
-      sizeFactor: window.innerWidth / 70,
+      sizeFactor: window.innerWidth / 20,
     };
   }
 
@@ -28,15 +29,28 @@ class SolarSystem extends Component {
   }
 
   render() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const sunDiameter = 40;
     return (
-      <div className="mainpage">
-        Solar System Page!
-        <button type="button" className="default-button nav-button" onClick={this.handleCreatePlanet}>Create new planet</button> {/* Button to create arbitrary planet */}
-        {this.props.planet.map((currentPlanet) => { // get each planet and create a SystemPlanet for it
-          console.log(currentPlanet);
-          return (
-            <div className="all-planets" key={currentPlanet.id}>
+      <div className="main-container">
+        Solar System TITLE!
+        <div className="all-planets">
+          <div className="sun"
+            style={{
+              width: sunDiameter,
+              height: sunDiameter,
+              top: (height - sunDiameter) / 2,
+              left: (width - sunDiameter) / 2,
+              borderRadius: sunDiameter / 2,
+            }}
+          />
+          {/* <button type="button" className="default-button nav-button" onClick={this.handleCreatePlanet}>Create new planet</button> Button to create arbitrary planet */}
+          {this.props.planet.map((currentPlanet) => { // get each planet and create a SystemPlanet for it
+            console.log(currentPlanet);
+            return (
               <SystemPlanet
+                key={currentPlanet.id}
                 sizeFactor={this.state.sizeFactor}
                 planetId={currentPlanet.id}
                 diameter={currentPlanet.diameter}
@@ -45,18 +59,18 @@ class SolarSystem extends Component {
                 orbitalPeriodAroundSun={currentPlanet.orbitalPeriodAroundSun}
                 planetName={currentPlanet.planetName}
               />
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
         <div className="speed-slider">
           <div>Orbit Speed</div>
-          <Slider defaultValue={100}
+          <Slider defaultValue={70}
             min={0}
-            step={20}
-            max={200}
+            step={10}
+            max={100}
             graduated
             progress
-            onChange={(value) => this.props.changeSpeed(200 - value)}
+            onChange={(value) => this.props.changeSpeed(100 - value)}
           />
         </div>
       </div>

@@ -1,0 +1,29 @@
+.main-container {
+    background-color: black;
+}
+
+.all-planets {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90vw;
+    height: 90vh;
+    // background-color: grey;
+}
+
+.sun {
+    background-color: yellow;
+    position: absolute;
+}
+
+.planet {
+    color: white;
+}
+
+.all-planets  {
+  width: 100%;
+}
+
+.planet-object {
+    z-index: 10;
+    background-color: white;
+}

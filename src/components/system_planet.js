@@ -27,8 +27,9 @@ class SystemPlanet extends Component {
     const currentDayState = this.state.day;
 
     const orbit = this.props.orbitalPeriodAroundSun;
+    // change to radians
     // eslint-disable-next-line no-mixed-operators
-    const a = 360 / orbit * currentDayState;
+    const a = (360 / orbit) * currentDayState * Math.PI / 180;
     // transform from polar to x/y
     const newDay = (currentDayState === orbit) ? 1 : currentDayState + 1;
     this.setState(
@@ -45,32 +46,37 @@ class SystemPlanet extends Component {
   // }
 
   render() {
-    // to AU, then to pixels
+    // to AU, then to pixels. Scaled up by 5 so we can see it
     // eslint-disable-next-line no-mixed-operators
-    const diameter = Math.ceil(this.props.diameter / (1.496 * 10 ** 8) * this.props.sizeFactor);
+    const diameter = Math.ceil(this.props.diameter / (1.496 * 10 ** 8) * this.props.sizeFactor) * 5;
+    // console.log(diameter);
     // AU to pixels
-    const dist = this.props.distanceFromSun * this.props.sizeFactor;
+    const dist = this.props.distanceFromSun * this.props.sizeFactor + 40;
 
     const x = ((1 + this.props.orbitalEccentricity) * dist * Math.sin(this.state.angle));
     const y = ((1 - this.props.orbitalEccentricity) * dist * Math.cos(this.state.angle));
+
     const width = window.innerWidth;
     const height = window.innerHeight;
 
 
     return (
-      <div className="planet">
-        <div className={this.props.planetName}
+      <div className="planet"
+        style={{
+          position: 'absolute',
+          top: ((height - diameter) / 2) + y,
+          left: ((width - diameter) / 2) + x,
+        }}
+      >
+        <div className="planet-object"
           style={{
-            color: 'black',
+            color: 'white',
             width: diameter,
             height: diameter,
             borderRadius: diameter / 2,
-            position: 'absolute',
-            top: (height - diameter / 2) + y,
-            left: (width - diameter / 2) + x,
           }}
         />
-        <div className="planet-name">{this.props.planetName}</div>
+        {/* <div className="planet-name">{this.props.planetName}</div> */}
         {/* <button type="button" onClick={this.renderClick}>Check state</button> */}
 
       </div>
