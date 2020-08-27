@@ -1,6 +1,6 @@
 // change require to es6 import style
 // import $ from 'jquery';
-import '../style.scss';
+import '../style/app.scss';
 import React from 'react';
 import {
   BrowserRouter as Router, Route, Switch,
@@ -20,17 +20,13 @@ const FallBack = (props) => {
 const App = (props) => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/planetWelcome" component={PlanetWelcome} />
-          <Route exact path="/planet/:id" component={Planet} />
-          <Route exact path="/solarSystem" component={SolarSystem} />
-          {/* <Route path="/about" component={About} />
-          <Route exact path="/test/:id" component={Test} /> */}
-          <Route component={FallBack} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/planetWelcome" component={PlanetWelcome} />
+        <Route exact path="/planets/:id" component={Planet} />
+        <Route exact path="/solarSystem" component={SolarSystem} />
+        <Route component={FallBack} />
+      </Switch>
     </Router>
   );
 };

@@ -13,7 +13,7 @@ class SolarSystem extends Component {
     super(props);
     this.state = {
       // AU to pixels
-      sizeFactor = window.innerWidth/70,
+      sizeFactor: window.innerWidth / 70,
     };
   }
 
@@ -22,16 +22,9 @@ class SolarSystem extends Component {
   }
 
   handleCreatePlanet = () => {
-    this.props.createPlanet();
-  }
-
-  createSystem = () => {
-    html = "<div className='all-planets'>";
-    for (id = 1; id < 9; id++) {
-      html += `<SystemPlanet sizeFactor=${this.state.sizeFactor} id=${id}/>`
-    }
-    html += "</div>";
-    return html;
+    // this.props.createPlanet();
+    console.log(this.props);
+    console.log(this.props.planet);
   }
 
   render() {
@@ -39,26 +32,42 @@ class SolarSystem extends Component {
       <div className="mainpage">
         Solar System Page!
         <button type="button" className="default-button nav-button" onClick={this.handleCreatePlanet}>Create new planet</button> {/* Button to create arbitrary planet */}
-        { this.createSystem() }
-        <div className='speed-slider'>
+        {this.props.planet.map((currentPlanet) => { // get each planet and create a SystemPlanet for it
+          console.log(currentPlanet);
+          return (
+            <div className="all-planets" key={currentPlanet.id}>
+              <SystemPlanet
+                sizeFactor={this.state.sizeFactor}
+                planetId={currentPlanet.id}
+                diameter={currentPlanet.diameter}
+                distanceFromSun={currentPlanet.distanceFromSun}
+                orbitalEccentricity={currentPlanet.orbitalEccentricity}
+                orbitalPeriodAroundSun={currentPlanet.orbitalPeriodAroundSun}
+                planetName={currentPlanet.planetName}
+              />
+            </div>
+          );
+        })}
+        <div className="speed-slider">
           <div>Orbit Speed</div>
           <Slider defaultValue={100}
-          min={0}
-          step={20}
-          max={200}
-          graduated
-          progress
-          onChange={(value) => this.props.changeSpeed(200 - value)} />
+            min={0}
+            step={20}
+            max={200}
+            graduated
+            progress
+            onChange={(value) => this.props.changeSpeed(200 - value)}
+          />
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (reduxState) => {
-  return {
-    planets: reduxState.planets.all,
-  };
-};
+const mapStateToProps = (reduxState) => ({
+  planet: reduxState.planet.all,
+});
 
-export default connect(mapStateToProps, { getPlanets, createPlanet, changeSpeed })(SolarSystem);
+export default connect(mapStateToProps, {
+  getPlanets, createPlanet, changeSpeed, SystemPlanet,
+})(SolarSystem);

@@ -8,8 +8,8 @@ const initialState = {
 const SystemReducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.SPEED_SET:
-      return {speed: action.payload}
-    default: 
+      return { speed: action.payload };
+    default:
       return state;
   }
 };

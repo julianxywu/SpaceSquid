@@ -3,24 +3,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 /* Custom imports */
-
-const TopBarSignIn = (props) => {
-  return (
-    <div className="buttons-container">
-      <NavLink to="/"><button type="button" className="default-button nav-button">Back to Homepage</button></NavLink>
-      <NavLink to="/solarSystem"><button type="button" className="default-button nav-button">To SolarSystem</button></NavLink>
-      <NavLink to="/planet/Sun"><button type="button" className="default-button nav-button">To Sun</button></NavLink>
-    </div>
-  );
-};
+import '../style/planetWelcomePage.scss';
+import TopBarNav from './topBarNav';
 
 const PlanetWelcome = (props) => {
   return (
+
     <div className="main-container">
-      <div className="planetpage-title">
-        Welcome to the Planet Page!
+      <TopBarNav />
+      <div className="content">
+        We will be looking at all 8 planets of our solar system! However, let&apos;s begin with our star, the Sun!
       </div>
-      <TopBarSignIn />
+      <div className="button-area">
+        <NavLink to="/planets/1"><button type="button" className="default-button nav-button">To Sun</button></NavLink>
+      </div>
     </div>
   );
 };

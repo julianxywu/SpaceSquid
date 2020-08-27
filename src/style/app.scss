@@ -1,0 +1,35 @@
+body, html {
+  font-family: "Roboto", sans-serif;
+  // background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+  background-image: url("../img/starBackground.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h2 h3 h4 {
+  color: white;
+}
+
+#main {
+  height: 100vh;
+}
+
+.topbarnav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.topbarnav-container button {
+  font-size: 20px;
+
+}
