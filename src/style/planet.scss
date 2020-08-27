@@ -2,7 +2,12 @@
     display: flex;
     flex-flow: column nowrap;
     width: 40%;
-    height: 85vh;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .planet-model {
@@ -17,14 +22,36 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-start;
-    color: white;
     width: 100%;
-    height: 20%;
-    font-size: 2vw;
+    height: 10%;
+    font-size: 4vw;
 }
 
 .planet-summary {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     white-space: pre-wrap;
+    line-height: 30px;
+    // background-color: white;
+    // color: black;
+    // border-radius: 20px;
+    // padding: 10px;
+    // margin-left: 10px;
+    font-size: 20px;
+}
+
+sup {
+    font-size: 10px;
+}
+
+span {
+    background-color: purple;
+    color: white;
+}
+
+.continue-button {
+    width: 30%;
+    margin-top: 3vh;
+    outline: none;
+    align-self: center;
 }

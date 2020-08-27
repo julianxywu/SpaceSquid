@@ -1,0 +1,23 @@
+{ "id": 3,
+    "planetName": "Venus",
+    "distanceFromSun": 0.7,
+    "diameter": 12103.6,
+    "mass": "4.867 x 10^24",
+    "density": 5.243,
+    "orbitalEccentricity": 0.00677672,
+    "orbitalInclination": 177,
+    "spinAxisTilt": 3,
+    "rotationDays": 243,
+    "orbitalPeriodAroundSun": 225,
+    "numberOfMoons": 0,
+    "significantSatellites": "None!",
+    "atmosphereComposition": "Carbon Dioxide, Nitrogen",
+    "interiorStructure": "Metallic core, mantle of hot rock, thin crust",
+    "summary": ["Venus has an extremely thick atmosphere--you can't see the surface!", 
+        "A day on Venus is longer than a year!",
+        "Venus is the only planet that spins clockwise in our solar system!",
+        "Venus is the second brightest natural object in the night sky, after our Moon!",
+        "There are a huge number of volcanoes, but very few mountain chains!"
+        ]
+  }
+  

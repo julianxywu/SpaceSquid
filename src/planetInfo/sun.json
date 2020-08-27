@@ -1,0 +1,23 @@
+{ "id": 1,
+    "planetName": "The Sun",
+    "distanceFromSun": 0,
+    "diameter": 1392700,
+    "mass": "1.9885 x 10^30",
+    "density": 1.408,
+    "orbitalEccentricity": 0,
+    "orbitalInclination": 0,
+    "spinAxisTilt": 7.25,
+    "rotationDays": 27,
+    "orbitalPeriodAroundSun": 0,
+    "numberOfMoons": 0,
+    "significantSatellites": "None!",
+    "atmosphereComposition": "hydrogen, helium",
+    "interiorStructure": "Core, radiative zone, covective zone",
+    "summary": ["Over one million Earth's could fit inside the Sun! It is truly THAT big!", 
+        "It takes about eight minutes for light to reach Earth from the Sun!",
+        "The Sun gives off solar flares that can affect our radio communications and technology!",
+        "A photon of light can take up to 100,000 years to get from the Sun's core to the surface!",
+        "The Sun has differential rotation, meaning it rotates faster at its equator than at its poles! Weird but cool!"
+        ]
+  }
+  

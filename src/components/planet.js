@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-// import { NavLink } from 'react-router-dom';
+
 // import { Map } from 'immutable';
 
 /* Custom imports */
@@ -13,7 +13,6 @@ import TopBarNav from './topBarNav';
 class Planet extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       // currentPlanet: null,
     };
@@ -25,6 +24,11 @@ class Planet extends Component {
     // this.setState({ currentPlanet: this.props.planet[0] });
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.props.getPlanet(this.props.match.params.id);
+    }
+  }
 
   handleGetPlanet = () => {
     // this.props.planet.map((currentPlanet) => {
@@ -37,46 +41,50 @@ class Planet extends Component {
     // console.log(this.state.currentPlanet);
   }
 
+  handleNextPlanet = () => {
+    const nextPlanetLink = `/planets/${this.props.planet[0].id + 1}`;
+    this.props.history.push(nextPlanetLink);
+  }
+
   render() {
     if (this.props.planet.length > 0) {
       const currentPlanet = this.props.planet[0];
+      const massEnding = currentPlanet.mass.substring(currentPlanet.mass.length - 2, currentPlanet.mass.length);
       return (
         <div className="main-container">
           <TopBarNav />
           {/* {this.props.planet.map((currentPlanet) => {
           console.log(currentPlanet);
           return ( */}
-          <>
-            <div className="planet-info">
-              <div className="planet-title">
-                {currentPlanet.planetName}
-              </div>
-              <div className="planet-summary">
-                Distance from the Sun: {currentPlanet.distanceFromSun} AU {'\n'}
-                Diameter: {currentPlanet.diameter} km {'\n'}
-                Mass: {currentPlanet.mass} kg {'\n'}
-                Density: {currentPlanet.density} {'\n'}
-                Atmosphere Thickness: {currentPlanet.atmosphereThickness} {'\n'}
-                Atmosphere Composition: {currentPlanet.atmosphereComposition} {'\n'}
-                Interior Structure: {currentPlanet.interiorStructure} {'\n'}
-                Orbital Eccentricity: {currentPlanet.orbitalEccentricity} {'\n'}
-                Orbital Inclination: {currentPlanet.orbitalInclination} {'\n'}
-                Axis Tilt: {currentPlanet.spinAxisTilt} {'\n'}
-                Rotation Period: {currentPlanet.rotationDays} {'\n'}
-                Orbital Period Around the Sun: {currentPlanet.orbitalPeriodAroundSun} {'\n'}
-                Number of Moons: {currentPlanet.numberOfMoons} {'\n'}
-              </div>
-              <div className="planet-funfacts">
-                Fun facts: {currentPlanet.summary} {'\n'}
-              </div>
+          <div className="planet-info">
+            <div className="planet-title">
+              {currentPlanet.planetName}
             </div>
-            <div className="planet-model">
-              MODEL HERE
+            <div className="planet-summary">
+              <text is="webview"> Distance from the Sun | <span> {currentPlanet.distanceFromSun} AU </span> </text>
+              <text is="webview"> Diameter | <span> {currentPlanet.diameter} km </span> </text>
+              <text is="webview"> Mass | <span> {currentPlanet.mass.substring(0, currentPlanet.mass.length - 3)}<sup> {massEnding} </sup> kg </span> </text>
+              <text is="webview"> Density | <span> {currentPlanet.density} g/cm <sup> 3 </sup> </span>
+              </text>
+              <text is="webview"> Orbital Eccentricity | <span> {currentPlanet.orbitalEccentricity} </span> </text>
+              <text is="webview"> Orbital Inclination | <span> {currentPlanet.orbitalInclination} degrees </span> </text>
+              <text is="webview"> Axis Tilt | <span> {currentPlanet.spinAxisTilt} degrees </span> </text>
+              <text is="webview"> Rotation Period | <span> {currentPlanet.rotationDays} days </span> </text>
+              <text is="webview"> Orbital Period Around the Sun | <span> {currentPlanet.orbitalPeriodAroundSun} days </span> </text>
+              <text is="webview"> Atmosphere Composition | <span> {currentPlanet.atmosphereComposition} </span> </text>
+              <text is="webview"> Interior Structure | <span> {currentPlanet.interiorStructure} </span> </text>
+              <text is="webview"> Number of Moons | <span> {currentPlanet.numberOfMoons} </span> </text>
+              <text is="webview"> Significant Satellites | <span> {currentPlanet.significantSatellites} </span></text>
+              <button type="button" onClick={this.handleNextPlanet} className="continue-button"> Continue </button>
             </div>
-            <button type="button" className="default-button nav-button" onClick={this.handleGetPlanet}>Get planet</button>
-          </>
-          {/* );
-        })} */}
+            <div className="planet-funfacts">
+              {/* <text> Fun facts | {currentPlanet.summary} </text> */}
+            </div>
+          </div>
+          <div className="planet-model">
+            MODEL HERE
+          </div>
+          {/* <button type="button" className="default-button nav-button" onClick={this.handleGetPlanet}>Get planet</button> */}
         </div>
       );
     } else {

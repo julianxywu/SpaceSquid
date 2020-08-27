@@ -48,6 +48,7 @@ class SolarSystem extends Component {
           {/* <button type="button" className="default-button nav-button" onClick={this.handleCreatePlanet}>Create new planet</button> Button to create arbitrary planet */}
           {this.props.planet.map((currentPlanet) => { // get each planet and create a SystemPlanet for it
             console.log(currentPlanet);
+            if (currentPlanet.id === 1) return null;
             return (
               <SystemPlanet
                 key={currentPlanet.id}
