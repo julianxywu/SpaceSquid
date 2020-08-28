@@ -1,5 +1,5 @@
-export const ROOT_URL = 'http://localhost:9090';
-// export const ROOT_URL = 'https://spacesquid.herokuapp.com';
+// export const ROOT_URL = 'http://localhost:9090';
+export const ROOT_URL = 'https://spacesquid.herokuapp.com';
 
 // keys for actiontypes
 export const ActionTypes = {
