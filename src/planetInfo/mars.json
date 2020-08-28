@@ -13,6 +13,7 @@
     "significantSatellites": "Phobos, Deimos",
     "atmosphereComposition": "Carbon dioxide, nitrogen, argon",
     "interiorStructure": "Metallic core, silicate mantle, and solid crust",
+    "color": "#E27B58",
     "summary": ["There are signs of liquid water on Mars!", 
         "Mars has the largest dust storms in our whole solar system!",
         "Mars has the tallest mountain known in our solar system, called Olympus Mons and is 21 km high!",

@@ -20,14 +20,56 @@
 
 .question {
     width: 100%;
+    font-size: 2.5vw;
 }
 
 .answers {
     width: 100%;
+    font-size: 1.5vw;
     padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 label {
     width: 20vw;
+    padding-right: 15px;
 }
 
+input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: 2vw;
+}
+
+.quiz-button {
+    width: 30%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    outline: none;
+    align-self: center;
+}
+
+.quiz-title {
+    font-size: 4vw;
+    margin: 4vh 0px;
+}
+
+.grade {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    font-size: 3vw;
+    margin-top: 5vh;
+}
+
+.modal-button {
+    width: 30%;
+    margin: 3vh 10px;
+    font-size: 2vw;
+    outline: none;
+    align-self: center;
+}

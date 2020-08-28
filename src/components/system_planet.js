@@ -48,16 +48,19 @@ class SystemPlanet extends Component {
   render() {
     // to AU, then to pixels. Scaled up by 5 so we can see it
     // eslint-disable-next-line no-mixed-operators
-    const diameter = Math.ceil(this.props.diameter / (1.496 * 10 ** 8) * this.props.sizeFactor) * 5;
+    let diameter = Math.ceil(this.props.diameter / (1.496 * 10 ** 8) * this.props.sizeFactor * 1000);
+    if (diameter < 2) diameter = 2;
     // console.log(diameter);
     // AU to pixels
-    const dist = this.props.distanceFromSun * this.props.sizeFactor + 40;
+    const dist = this.props.distanceFromSun * this.props.sizeFactor + 45;
 
-    const x = ((1 + this.props.orbitalEccentricity) * dist * Math.sin(this.state.angle));
-    const y = ((1 - this.props.orbitalEccentricity) * dist * Math.cos(this.state.angle));
+    const x = (dist * Math.sin(this.state.angle));
+    const y = (dist * Math.cos(this.state.angle));
 
     const width = window.innerWidth;
     const height = window.innerHeight;
+
+    const { planetColor } = this.props;
 
 
     return (
@@ -70,7 +73,7 @@ class SystemPlanet extends Component {
       >
         <div className="planet-object"
           style={{
-            color: 'white',
+            backgroundColor: planetColor,
             width: diameter,
             height: diameter,
             borderRadius: diameter / 2,

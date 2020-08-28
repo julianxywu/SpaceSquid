@@ -13,6 +13,7 @@
   "significantSatellites": "Callipso, Io, Europa, Ganymede",
   "atmosphereComposition": "Hydrogen, helium, ammonia",
   "interiorStructure": "Rocky core, helium & metallic hydrogen layer, liquid hydrogen, outer icy layer",
+  "color": "#C88B3A",
   "summary": ["There are constant auroras at the poles of Jupiter!", 
       "The Big Red Spot is a giant storm that has been raging for at least 150 years.",
       "Jupiter is the hottest planet, around 450 degrees Kelvin!",

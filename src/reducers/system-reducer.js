@@ -1,8 +1,8 @@
 import { ActionTypes } from '../actions';
 
 const initialState = {
-  // default is 100 milliseconds per Earth Day
-  speed: 100,
+  // default is 50 milliseconds per Earth Day
+  speed: 20,
 };
 
 const SystemReducer = (state = initialState, action) => {

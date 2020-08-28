@@ -13,9 +13,10 @@
     "significantSatellites": "None!",
     "atmosphereComposition": "None!",
     "interiorStructure": "Metallic core, no mantle, thin crust",
+    "color": "#504E51",
     "summary": ["Mercury has an exosphere instead of an atmosphere!", 
         "Your weight on Merucy would be 38% of your weight on Earth!",
-        "The surface of Mercury is covered in craters and you can tell the age of the crater by looking at the color of the surrounding material!",
+        "The surface of Mercury is covered in craters, whose age is determined by the color!",
         "There is no plate tectonics on the entire planet!",
         "Mercury is 1/3 the size of Earth, but has an iron core just as big as Earth's!"
         ]

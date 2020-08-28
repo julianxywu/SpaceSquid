@@ -13,10 +13,11 @@
   "significantSatellites": "Triton",
   "atmosphereComposition": "Hydrogen, helium, methane",
   "interiorStructure": "Icy & rocky core, mantle  of water, ammonia, and methane ice",
+  "color": "#3E54E8",
   "summary": ["If you could stand on Neptune, the gravity would be almost the same as on Earth!", 
       "Neptune's winds are the strongest of any planet, moving at 1,340 kilometers per second!",
       "Triton moves in the opposite direction around Neptune compared to all the other moons!",
-      "Although Uranus experiences the coldest temperature in the solar system, Neptune has the coldest average temperatures!",
+      "Uranus experiences the coldest temperature, but Neptune has the coldest average temperatures!",
       "It took Voyager 2 12 years to get to Neptune, moving at around 67,600 kilometers per hour!"
       ]
 }
