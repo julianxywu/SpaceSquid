@@ -1,0 +1,22 @@
+{ "id": 6,
+  "planetName": "Jupiter",
+  "distanceFromSun": 5.2,
+  "diameter": 142984,
+  "mass": "1.898 x 10^27",
+  "density": 1.326,
+  "orbitalEccentricity": 0.049,
+  "orbitalInclination": 1.3,
+  "spinAxisTilt": 3.1,
+  "rotationDays": 0.417,
+  "orbitalPeriodAroundSun": 4333,
+  "numberOfMoons": 79,
+  "significantSatellites": "Callipso, Io, Europa, Ganymede",
+  "atmosphereComposition": "Hydrogen, helium, ammonia",
+  "interiorStructure": "Rocky core, helium & metallic hydrogen layer, liquid hydrogen, outer icy layer",
+  "summary": ["There are constant auroras at the poles of Jupiter!", 
+      "The Big Red Spot is a giant storm that has been raging for at least 150 years.",
+      "Jupiter is the hottest planet, around 450 degrees Kelvin!",
+      "There are clouds that are 3000 kilometers deep!",
+      "Different parts of Jupiter move at different speeds, called differential rotation!"
+      ]
+}

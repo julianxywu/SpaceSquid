@@ -1,0 +1,22 @@
+{ "id": 9,
+  "planetName": "Neptune",
+  "distanceFromSun": 30.0,
+  "diameter": 49528,
+  "mass": "1.02 x 10^26",
+  "density": 1.638,
+  "orbitalEccentricity": 0.011,
+  "orbitalInclination": 1.8,
+  "spinAxisTilt": 28.3,
+  "rotationDays": 0.667,
+  "orbitalPeriodAroundSun": 60190,
+  "numberOfMoons": 14,
+  "significantSatellites": "Triton",
+  "atmosphereComposition": "Hydrogen, helium, methane",
+  "interiorStructure": "Icy & rocky core, mantle  of water, ammonia, and methane ice",
+  "summary": ["If you could stand on Neptune, the gravity would be almost the same as on Earth!", 
+      "Neptune's winds are the strongest of any planet, moving at 1,340 kilometers per second!",
+      "Triton moves in the opposite direction around Neptune compared to all the other moons!",
+      "Although Uranus experiences the coldest temperature in the solar system, Neptune has the coldest average temperatures!",
+      "It took Voyager 2 12 years to get to Neptune, moving at around 67,600 kilometers per hour!"
+      ]
+}

@@ -1,0 +1,22 @@
+{ "id": 7,
+  "planetName": "Saturn",
+  "distanceFromSun": 9.5,
+  "diameter": 120536,
+  "mass": "5.68 x 10^26",
+  "density": 0.687,
+  "orbitalEccentricity": 0.057,
+  "orbitalInclination": 2.5,
+  "spinAxisTilt": 26.7,
+  "rotationDays": 0.458,
+  "orbitalPeriodAroundSun": 10759,
+  "numberOfMoons": 82,
+  "significantSatellites": "Titan, Enceladus, Hyperion",
+  "atmosphereComposition": "Hydrogen, helium, water ice",
+  "interiorStructure": "Rocky core, helium & metallic hydrogen layer, liquid hydrogen, outer icy layer",
+  "summary": ["We can see Saturn's rings because they are so young, about 100 million years old!", 
+      "Saturn has a huge, hexagonal hurricane at its North Pole!",
+      "One of its moons, Enceladus, could support life as we know it!",
+      "The rings are made up of rock and ice, with pieces ranging from dust to a kilometer across!",
+      "Because Saturn is so low density and rotates so fast, it flattens into an oval!"
+      ]
+}

@@ -1,0 +1,22 @@
+{ "id": 8,
+  "planetName": "Uranus",
+  "distanceFromSun": 19.2,
+  "diameter": 51118,
+  "mass": "8.68 x 10^25",
+  "density": 1.271,
+  "orbitalEccentricity": 0.046,
+  "orbitalInclination": 0.8,
+  "spinAxisTilt": 97.8,
+  "rotationDays": 0.708,
+  "orbitalPeriodAroundSun": 30687,
+  "numberOfMoons": 27,
+  "significantSatellites": "Titania, Oberon",
+  "atmosphereComposition": "Hydrogen, helium, methane",
+  "interiorStructure": "Icy & rocky core, mantle  of water, ammonia, and methane ice",
+  "summary": ["Uranus rotates on it's side!", 
+      "Uranus experiences the lowest temperature of any planet--47 degrees Kelvin!",
+      "The reason Uranus is blue is because of the methane in the atmosphere, which absorbs red light!",
+      "Uranus is the only one of the outer planets that doesn't radiate more heat than it absorbs!",
+      "Uranus was discovered all the way back in 1690!"
+      ]
+}
