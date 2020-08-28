@@ -1,0 +1,23 @@
+{ "id": 5,
+    "planetName": "Mars",
+    "distanceFromSun": 1.524,
+    "diameter": 6779,
+    "mass": "6.39 x 10^23",
+    "density": 3.9,
+    "orbitalEccentricity": 0.0934,
+    "orbitalInclination": 1.85,
+    "spinAxisTilt": 25,
+    "rotationDays": 1.03,
+    "orbitalPeriodAroundSun": 687,
+    "numberOfMoons": 2,
+    "significantSatellites": "Phobos, Deimos",
+    "atmosphereComposition": "Carbon dioxide, nitrogen, argon",
+    "interiorStructure": "Metallic core, silicate mantle, and solid crust",
+    "summary": ["There are signs of liquid water on Mars!", 
+        "Mars has the largest dust storms in our whole solar system!",
+        "Mars has the tallest mountain known in our solar system, called Olympus Mons and is 21 km high!",
+        "While there once was plate tectonics on Mars, today, there is no longer any movements of Mars' plates!",
+        "Mars is a cold desert, with an average temperature of -81 degrees Fahrenheit!"
+        ]
+  }
+  
