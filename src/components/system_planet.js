@@ -52,7 +52,7 @@ class SystemPlanet extends Component {
     if (diameter < 2) diameter = 2;
     // console.log(diameter);
     // AU to pixels
-    const dist = this.props.distanceFromSun * this.props.sizeFactor + 45;
+    const dist = this.props.distanceFromSun * this.props.sizeFactor + 40;
 
     const x = (dist * Math.sin(this.state.angle));
     const y = (dist * Math.cos(this.state.angle));

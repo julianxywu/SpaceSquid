@@ -73,3 +73,28 @@ input[type=radio] {
     outline: none;
     align-self: center;
 }
+
+.modal-screen {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    width: 40%;
+    height: 80vh;
+    margin-top: 12.5vh;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.modal-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border-radius: 20px;
+    z-index: 2;
+}
