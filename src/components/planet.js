@@ -79,7 +79,7 @@ class Planet extends Component {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
     const loader = new THREE.ObjectLoader();
-    const sun = loader.load('../model/sun/sunModel.obj');
+    const sun = loader.load('../../model/sun/sunModel.obj');
     scene.add(sun);
     renderer.render(scene, camera);
   }
