@@ -1,3 +1,15 @@
+.main-container-planet {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 100vh;
+    // background-color: red;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    color: white;
+}
+
 .planet-info {
     display: flex;
     flex-flow: column nowrap;
@@ -23,7 +35,7 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 10%;
+    height: 15%;
     font-size: 4vw;
 }
 
@@ -54,4 +66,30 @@ span {
     margin-top: 3vh;
     outline: none;
     align-self: center;
+}
+
+.modal-screen {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    width: 40%;
+    height: 80vh;
+    margin-top: 12.5vh;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    // justify-content: center;
+    // align-items: flex-end;
+}
+
+.modal-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border-radius: 20px;
+    z-index: 2;
 }

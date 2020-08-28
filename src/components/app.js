@@ -9,6 +9,7 @@ import {
 /* Custom Imports */
 import HomePage from './homepage';
 import Planet from './planet';
+import PlanetQuiz from './planet_quiz';
 import PlanetWelcome from './planet_welcome';
 import SolarSystem from './solar_system';
 
@@ -23,6 +24,7 @@ const App = (props) => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/planetWelcome" component={PlanetWelcome} />
+        <Route exact path="/planets/quiz" component={PlanetQuiz} />
         <Route exact path="/planets/:id" component={Planet} />
         <Route exact path="/solarSystem" component={SolarSystem} />
         <Route component={FallBack} />
